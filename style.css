@@ -1,0 +1,103 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family:'Work Sans';
+}
+body{
+    background-image: url(./assets/images/background-pattern-desktop.svg);
+    background-repeat:no-repeat ;
+    background-size: 100%;
+    background-color: hsl(275, 100%, 97%);
+}
+img, svg{
+    max-width: 100%;
+    display: block;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+.accordion-box{
+    max-width: 37.5rem;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 1rem;
+    padding: 1.25rem 2.5rem;
+}
+
+.header{
+    display:flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 2rem;
+    color:hsl(292, 42%, 14%);
+    margin: 1.25rem 0;
+}
+
+.accordion{
+    display: flex;
+    flex-direction: column;
+    /* gap: 1rem; */
+    padding: 1.5rem 0;
+    font-size: 16px;
+    border-bottom: 0.0625rem solid hsl(275, 100%, 97%);
+}
+.accordion:last-child {
+    border-bottom: none;
+}
+.accordion > .accordion-btn{
+    /* height: 3rem; */
+    cursor:pointer;
+    background-color: transparent;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    color:hsl(292, 42%, 14%);
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    text-align: left;
+    transition: 0.2s ease-in-out;
+}
+.accordion > .accordion-btn:hover{
+    color:hsl(281, 83%, 54%);
+}
+.accordion > .accordion-btn > .icon > .minus-icon{
+    display: none;
+}
+.accordion > .accordion-btn > .icon {
+    display:flex;
+    align-items: center;
+    justify-content: right;
+    margin:0;
+    width: 60px;
+}
+
+.accordion > .accordion-description{
+    max-height:0;
+    background-color: hsl(0, 0%, 100%);
+    overflow:hidden;
+    transition: max-height 0.5s ease;
+}
+.accordion > .accordion-description p{
+    padding: 1.5rem;
+    color:hsl(292, 16%, 49%);
+}
+@media (max-width:33.75rem){
+    body{
+        background-image: url(./assets/images/background-pattern-mobile.svg);
+    }
+    .accordion-box{
+        max-width: 80%;
+    }
+    
+}
+
+.attribution{
+    display: flex;
+    justify-content: center;
+    margin:1.25rem;
+}
